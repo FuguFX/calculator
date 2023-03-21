@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <style>
+            .header {
+                margin: -10px;
+                padding: 10px;
+                text-align: center;
+                font-size: 15px;
+                background-color: #333;
+                color: #ececec;
+            }
+
+            .main {
+                margin: -10px;
+                padding-top: 30px;
+                padding-bottom: 50px;
+                text-align: center;
+                background-color: #ececec;
+            }
+
+            .head {
+                display: inline-block;
+                font-size: 35px;
+                color: #333;
+                border-bottom: 4px solid #333;
+            }
+
+            .button {
+                display: inline-block;
+                margin: 10px;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: #333333;
+                color: #ececec;
+                cursor: pointer;
+                transition: all 0.5s 0s ease;
+            }
+
+            .button:hover {
+                margin: 0px;
+                padding: 20px;
+            }
+
+            .answer {
+                display: inline-block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #333;
+            }
+
+            .footer {
+                background-color: #333;
+                color: #ececec;
+                margin: -10px;
+                padding: 10px;
+                text-align: center;
+                font-size: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>ぐれべ</h1>
+        </div>
+        <div class="main">
+            <h1 class="head">JavaScriptの計算機風何か</h1>
+            <br>
+            <h1 class="button" onclick="button1()">たし算</h1>
+            <h1 class="button" onclick="button2()">ひき算</h1>
+            <br>
+            <h1 class="button" onclick="button3()">かけ算</h1>
+            <h1 class="button" onclick="button4()">わり算</h1>
+            <br>
+            <h1 class="answer" id='one'></h1>
+            <h1 class="answer" id='mark'></h1>
+            <h1 class="answer" id='two'></h1>
+            <h1 class="answer" id='='></h1>
+            <h1 class="answer" id='answer'></h1>
+        </div>
+        <div class="footer">
+            <h1>計算機風何か</h1>
+            <h3>©ぐれべ</h3>
+        </div>
+
+        <script>
+            document.getElementById('two').textContent = "まだ入力されていません";
+            function button1() {
+                var one = +prompt('ひとつめ')
+                var two = +prompt('ふたつめ')
+                var answer = one + two;
+                document.getElementById('mark').textContent = "+";
+                document.getElementById('=').textContent = "=";
+                document.getElementById('one').textContent = one;
+                document.getElementById('two').textContent = two;
+                document.getElementById('answer').textContent = answer;
+            }
+            function button2() {
+                var one = +prompt('ひとつめ')
+                var two = +prompt('ふたつめ')
+                var answer = one - two;
+                document.getElementById('mark').textContent = "-";
+                document.getElementById('=').textContent = "=";
+                document.getElementById('one').textContent = one;
+                document.getElementById('two').textContent = two;
+                document.getElementById('answer').textContent = answer;
+            }
+            function button3() {
+                var one = +prompt('ひとつめ')
+                var two = +prompt('ふたつめ')
+                var answer = one * two;
+                document.getElementById('mark').textContent = "×";
+                document.getElementById('=').textContent = "=";
+                document.getElementById('one').textContent = one;
+                document.getElementById('two').textContent = two;
+                document.getElementById('answer').textContent = answer;
+            }
+            function button4() {
+                var one = +prompt('ひとつめ')
+                var two = +prompt('ふたつめ')
+                var answer = one / two;
+                document.getElementById('mark').textContent = "÷";
+                document.getElementById('=').textContent = "=";
+                document.getElementById('one').textContent = one;
+                document.getElementById('two').textContent = two;
+                document.getElementById('answer').textContent = answer;
+            }
+        </script>
+    </body>
+</html>
